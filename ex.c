@@ -756,7 +756,7 @@ static int ec_glob(char *loc, char *cmd, char *arg)
 	return 0;
 }
 
-static struct option {
+static struct optionn {
 	char *abbr;
 	char *name;
 	int *var;
@@ -808,7 +808,7 @@ static int ec_set(char *loc, char *cmd, char *arg)
 			}
 		}
 		for (i = 0; i < LEN(options); i++) {
-			struct option *o = &options[i];
+			struct optionn *o = &options[i];
 			if (!strcmp(o->abbr, opt) || !strcmp(o->name, opt)) {
 				*o->var = val;
 				return 0;
